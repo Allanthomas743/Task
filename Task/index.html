@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML to JSON Mapper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel" id="left-panel">
+            <h3>Input XML</h3>
+            <input type="file" id="upload-xml" accept=".xml">
+            <pre id="xml-tree" class="language-xml"></pre>
+        </div>
+        <div class="panel" id="center-panel">
+            <h3>Element Mapping</h3>
+            <input type="text" id="new-element" placeholder="Enter new element">
+            <button id="add-element">Add Element</button>
+            <input type="file" id="upload-xml-b" accept=".xml">
+            <ul id="element-list"></ul>
+        </div>
+        <div class="panel" id="right-panel">
+            <h3>JSON Output</h3>
+            <pre id="json-output"></pre>
+            <button id="download-json">Download JSON</button>
+            <button id="save-mappings">Save Mappings</button>
+            <button id="load-mappings">Load Mappings</button>
+        </div>
+    </div>
+    <div id="attribute-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Select an Attribute</h2>
+            <form id="attribute-form">
+                <!-- Attributes will be dynamically added here -->
+            </form>
+            <button id="submit-attribute">Submit</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-xml.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
